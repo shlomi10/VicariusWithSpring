@@ -7,13 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Vicarius" />
+        <module name="VicariusSpring" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Vicarius" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Vicarius" options="-parameters" />
+      <module name="VicariusSpring" options="-parameters" />
     </option>
   </component>
 </project>
