@@ -1,6 +1,5 @@
 package com.vicarius.automation.utilities;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
