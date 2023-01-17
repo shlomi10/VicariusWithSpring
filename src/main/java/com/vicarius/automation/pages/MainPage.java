@@ -1,10 +1,8 @@
 package com.vicarius.automation.pages;
 
-import com.vicarius.automation.utilities.BasePageFunctions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.stereotype.Component;
+import com.vicarius.automation.utilities.BasePageFunctions;
 
 /**
  * this class represents the main page
@@ -12,12 +10,11 @@ import org.springframework.stereotype.Component;
  * @author Shlomi
  */
 
-@Component
 public class MainPage extends BasePageFunctions {
 
     // constructor
-    public MainPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public MainPage(WebDriver driver) {
+        super(driver);
     }
 
     By loginBTN = By.cssSelector(".link-button.hidden-lg-down");

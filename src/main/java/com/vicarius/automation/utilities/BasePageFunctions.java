@@ -1,5 +1,6 @@
 package com.vicarius.automation.utilities;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,11 +21,11 @@ public abstract class BasePageFunctions {
     protected WebDriverWait wait;
 
     // constructor
-    public BasePageFunctions(WebDriver driver, WebDriverWait wait) {
+    public BasePageFunctions(WebDriver driver) {
         this.driver = driver;
-        this.wait = wait;
+        long timeToWait = 10;
+        wait = new WebDriverWait(driver, timeToWait);
     }
-
 
     // get webDriver
     public WebDriver getDriver() {
@@ -75,17 +76,6 @@ public abstract class BasePageFunctions {
     public Boolean waitForElementToBeClickableAndClickIt(By elem) {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(elem)).click();
-            return true;
-        } catch (Exception e) {
-            System.out.println("Wait for element to be clickable was not worked correct");
-            return false;
-        }
-    }
-
-    // element to be clickable
-    public Boolean waitForElementToBeClickable(By elem) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(elem));
             return true;
         } catch (Exception e) {
             System.out.println("Wait for element to be clickable was not worked correct");
